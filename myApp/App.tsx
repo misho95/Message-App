@@ -2,10 +2,10 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import LoginScreen from './pages/forms/login.screen.page';
-import IndexScreen from './pages/home.screen/index.screen';
-import RegistrationScreen from './pages/forms/registration.screen';
-import ResetScreen from './pages/forms/reset.screen';
+import LoginScreen from './app/pages/forms/login.screen.page';
+import IndexScreen from './app/pages/home.screen/index.screen';
+import RegistrationScreen from './app/pages/forms/registration.screen';
+import ResetScreen from './app/pages/forms/reset.screen';
 
 function App() {
   const auth = false;
