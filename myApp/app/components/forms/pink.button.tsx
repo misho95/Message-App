@@ -1,7 +1,11 @@
 import {useState} from 'react';
 import {Pressable, StyleSheet, Text} from 'react-native';
 
-const PinkButton = () => {
+type PropsType = {
+  title: string;
+};
+
+const PinkButton = ({title}: PropsType) => {
   const [pressed, setPressed] = useState(false);
 
   return (
@@ -9,7 +13,7 @@ const PinkButton = () => {
       style={pressed ? styles.buttonPress : styles.button}
       onPressIn={() => setPressed(true)}
       onPressOut={() => setPressed(false)}>
-      <Text style={styles.title}>Submit</Text>
+      <Text style={styles.title}>{title}</Text>
     </Pressable>
   );
 };

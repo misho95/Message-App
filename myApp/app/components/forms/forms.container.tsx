@@ -18,9 +18,13 @@ type PropsType = {
   children: ReactNode;
   navigation: any;
   title: string;
+  height: {
+    minHeight: number;
+    maxHeight: number;
+  };
 };
 
-const FormsContainer = ({children, navigation, title}: PropsType) => {
+const FormsContainer = ({children, navigation, title, height}: PropsType) => {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -36,7 +40,12 @@ const FormsContainer = ({children, navigation, title}: PropsType) => {
               {/* back button */}
 
               <View style={styles.center}>
-                <View style={styles.form}>
+                <View
+                  style={{
+                    ...styles.form,
+                    minHeight: height.minHeight,
+                    maxHeight: height.maxHeight,
+                  }}>
                   <View style={{gap: 20}}>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
                       <Image
@@ -71,8 +80,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   form: {
+    flex: 1,
     width: '100%',
-    height: 505,
     backgroundColor: '#F8F8F8',
     borderRadius: 40,
     paddingHorizontal: 20,

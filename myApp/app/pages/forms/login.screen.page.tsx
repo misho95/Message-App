@@ -1,24 +1,24 @@
-import {
-  Button,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import FormInputs from '../../components/forms/forms.input';
 import FormsContainer from '../../components/forms/forms.container';
 import PinkButton from '../../components/forms/pink.button';
 
-const LoginScreen = ({navigation}) => {
+type PropsType = {
+  navigation: any;
+};
+
+const LoginScreen = ({navigation}: PropsType) => {
   return (
     <>
-      <FormsContainer navigation={navigation} title={'შესვლა'}>
+      <FormsContainer
+        navigation={navigation}
+        title={'შესვლა'}
+        height={{minHeight: 455, maxHeight: 505}}>
         <View style={styles.container}>
           {/* inputs */}
           <View style={{paddingVertical: 15, flex: 1, gap: 15}}>
-            <FormInputs secured={false} placeholder={'Email'} />
-            <FormInputs secured={true} placeholder={'********'} />
+            <FormInputs secured={false} placeholder={'ელ-ფოსტა'} />
+            <FormInputs secured={true} placeholder={'პაროლი'} />
           </View>
           {/*  bottom */}
           <View style={styles.flexRow}>
@@ -31,7 +31,7 @@ const LoginScreen = ({navigation}) => {
               დაგავიწყდა პაროლი?
             </Text>
           </View>
-          <PinkButton />
+          <PinkButton title="შესვლა" />
           <Text
             style={{
               fontSize: 12,
