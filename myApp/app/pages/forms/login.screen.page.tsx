@@ -36,7 +36,7 @@ const LoginScreen = ({navigation}: PropsType) => {
             style={{
               fontSize: 12,
               textAlign: 'center',
-              width: 180,
+              width: '80%',
               alignSelf: 'center',
             }}>
             ახალი ხარ KidNest Loyal-ში?{' '}

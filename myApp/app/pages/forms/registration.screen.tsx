@@ -37,18 +37,18 @@ const RegistrationScreen = ({navigation}: PropsType) => {
             style={{
               fontSize: 12,
               textAlign: 'center',
-              width: 180,
+              width: '80%',
               alignSelf: 'center',
             }}>
-            ახალი ხარ KidNest Loyal-ში?{' '}
+            უკვე გაქვთ ანგარიში KidNest Loyal-ში? გაიარე
             <Text
               style={{color: '#B244A2'}}
               onPress={() => {
-                navigation.navigate('Registration');
+                navigation.navigate('Login');
               }}>
-              დარეგისტრირდი
-            </Text>{' '}
-            ახლავე.
+              {' '}
+              ავტორიზაცია
+            </Text>
           </Text>
         </View>
       </FormsContainer>
