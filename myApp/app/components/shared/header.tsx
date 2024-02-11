@@ -1,12 +1,10 @@
 import {useNavigation} from '@react-navigation/native';
 import {View, Image, StyleSheet, Pressable} from 'react-native';
 
-const AppHeader = () => {
-  const navigation = useNavigation();
-
+const AppHeader = ({navigation}) => {
   return (
     <View style={styles.header}>
-      <Pressable onPress={() => navigation.navigate('offers' as never)}>
+      <Pressable onPress={() => navigation.navigate('Login')}>
         <Image
           source={require('../../assets/imgs/logo.header.png')}
           style={{width: 130, height: 42}}
@@ -26,7 +24,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: 10,
   },
 });
 
