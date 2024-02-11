@@ -8,7 +8,7 @@ import RegistrationScreen from './pages/forms/registration.screen';
 import ResetScreen from './pages/forms/reset.screen';
 
 function App() {
-  const auth = true;
+  const auth = false;
 
   const Stack = createNativeStackNavigator();
 
