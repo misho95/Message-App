@@ -10,11 +10,12 @@ const IndexScreen = () => {
 
   return (
     <Tab.Navigator
+      sceneContainerStyle={{backgroundColor: '#fff', padding: 20}}
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: '#B244A2',
         tabBarInactiveTintColor: '#637381',
-        tabBarStyle: {height: 81, paddingVertical: 8},
+        tabBarStyle: {height: 81, paddingBottom: 20},
       }}>
       <Tab.Screen
         options={{

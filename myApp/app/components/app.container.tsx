@@ -10,21 +10,14 @@ type PropsType = {
 
 const AppContainer = ({children, navigation}: PropsType) => {
   return (
-    <View style={styles.container}>
-      <SafeAreaView style={styles.safeContent}>
-        <AppHeader navigation={navigation} />
-        <View style={styles.content}>{children}</View>
-      </SafeAreaView>
-    </View>
+    <SafeAreaView style={styles.safeContent}>
+      <AppHeader navigation={navigation} />
+      <View style={styles.content}>{children}</View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    flex: 1,
-    paddingHorizontal: 20,
-  },
   safeContent: {
     flex: 1,
     gap: 25,

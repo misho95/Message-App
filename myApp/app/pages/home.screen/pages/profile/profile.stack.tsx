@@ -8,7 +8,10 @@ const ProfileStack = () => {
 
   return (
     <Stack.Navigator
-      screenOptions={{headerShown: false}}
+      screenOptions={{
+        headerShown: false,
+        contentStyle: {backgroundColor: '#fff'},
+      }}
       initialRouteName={'Profile.Index'}>
       <Stack.Screen name="Profile.Index" component={ProfileScreen} />
       <Stack.Screen name="Profile.Detaile" component={ProfileDetaileScreen} />
