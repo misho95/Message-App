@@ -14,15 +14,21 @@ const IndexScreen = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: 'red',
-        tabBarInactiveTintColor: 'green',
+        tabBarActiveTintColor: '#B244A2',
+        tabBarInactiveTintColor: '#637381',
       }}>
       <Tab.Screen
         options={{
           tabBarIcon: ({color, size}) =>
-            color === 'red' ? (
-              <Image source={require('../../assets/icons/tabs/home.png')} />
-            ) : null,
+            color === '#B244A2' ? (
+              <Image
+                source={require('../../assets/icons/tabs/home-dash-active.png')}
+              />
+            ) : (
+              <Image
+                source={require('../../assets/icons/tabs/home-dash.png')}
+              />
+            ),
         }}
         name="Home"
         component={HomeScreen}
