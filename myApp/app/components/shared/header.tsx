@@ -2,9 +2,12 @@ import {useNavigation} from '@react-navigation/native';
 import {View, Image, StyleSheet, Pressable} from 'react-native';
 
 const AppHeader = ({navigation}) => {
+  const auth = true;
+
   return (
     <View style={styles.header}>
-      <Pressable onPress={() => navigation.navigate('Login')}>
+      <Pressable
+        onPress={() => navigation.navigate(auth ? 'მთავარი' : 'login')}>
         <Image
           source={require('../../assets/imgs/logo.header.png')}
           style={{width: 130, height: 42}}

@@ -1,10 +1,11 @@
-import {Button, Text, View} from 'react-native';
+import {SafeAreaView, Text, View} from 'react-native';
+import AppContainer from '../../../components/app.container';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <AppContainer navigation={navigation}>
       <Text>Home Screen</Text>
-    </View>
+    </AppContainer>
   );
 };
 

@@ -1,10 +1,8 @@
-import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from './pages/home.screen';
 import ProfileStack from './pages/profile/profile.stack';
 import SearchScreen from './pages/search.screen';
 import FavScreen from './pages/fav.screen';
-import MyTabBar from './my.tap.bar';
 import {Image} from 'react-native';
 
 const IndexScreen = () => {
@@ -16,6 +14,7 @@ const IndexScreen = () => {
         headerShown: false,
         tabBarActiveTintColor: '#B244A2',
         tabBarInactiveTintColor: '#637381',
+        tabBarStyle: {height: 81, paddingVertical: 8},
       }}>
       <Tab.Screen
         options={{
@@ -30,7 +29,7 @@ const IndexScreen = () => {
               />
             ),
         }}
-        name="Home"
+        name="მთავარი"
         component={HomeScreen}
       />
       <Tab.Screen
@@ -44,7 +43,7 @@ const IndexScreen = () => {
               <Image source={require('../../assets/icons/tabs/search.png')} />
             ),
         }}
-        name="Search"
+        name="ძიება"
         component={SearchScreen}
       />
       <Tab.Screen
@@ -58,7 +57,7 @@ const IndexScreen = () => {
               <Image source={require('../../assets/icons/tabs/sparkle.png')} />
             ),
         }}
-        name="Favorite"
+        name="ფავორიტები"
         component={FavScreen}
       />
       <Tab.Screen
@@ -72,7 +71,7 @@ const IndexScreen = () => {
               <Image source={require('../../assets/icons/tabs/profile.png')} />
             ),
         }}
-        name="Profile"
+        name="პროფილი"
         component={ProfileStack}
       />
     </Tab.Navigator>
