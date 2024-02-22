@@ -5,6 +5,7 @@ const MyTabBar = ({navigation}) => {
     {
       id: 1,
       url: 'Home',
+      title: 'მთავარი',
       icon: {
         default: 'src/assets/icons/tabs/home.svg',
         active: 'src/assets/icons/tabs/home.active.svg',
@@ -13,14 +14,17 @@ const MyTabBar = ({navigation}) => {
     {
       id: 2,
       url: 'Search',
+      title: 'ძიება',
     },
     {
       id: 3,
       url: 'Favorite',
+      title: 'ფავორიტები',
     },
     {
       id: 4,
       url: 'Profile',
+      title: 'პროფილი',
     },
   ];
 
@@ -33,7 +37,8 @@ const MyTabBar = ({navigation}) => {
             onPress={() => {
               navigation.navigate(l.url);
             }}>
-            <Text>{l.url}</Text>
+            <Image source={require('../../assets/icons/tabs/home.png')} />
+            <Text>{l.title}</Text>
           </Pressable>
         );
       })}
