@@ -33,9 +33,48 @@ const IndexScreen = () => {
         name="Home"
         component={HomeScreen}
       />
-      <Tab.Screen name="Search" component={SearchScreen} />
-      <Tab.Screen name="Favorite" component={FavScreen} />
-      <Tab.Screen name="Profile" component={ProfileStack} />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({color, size}) =>
+            color === '#B244A2' ? (
+              <Image
+                source={require('../../assets/icons/tabs/search-active.png')}
+              />
+            ) : (
+              <Image source={require('../../assets/icons/tabs/search.png')} />
+            ),
+        }}
+        name="Search"
+        component={SearchScreen}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({color, size}) =>
+            color === '#B244A2' ? (
+              <Image
+                source={require('../../assets/icons/tabs/sparkle-active.png')}
+              />
+            ) : (
+              <Image source={require('../../assets/icons/tabs/sparkle.png')} />
+            ),
+        }}
+        name="Favorite"
+        component={FavScreen}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({color, size}) =>
+            color === '#B244A2' ? (
+              <Image
+                source={require('../../assets/icons/tabs/profile-active.png')}
+              />
+            ) : (
+              <Image source={require('../../assets/icons/tabs/profile.png')} />
+            ),
+        }}
+        name="Profile"
+        component={ProfileStack}
+      />
     </Tab.Navigator>
   );
 };
