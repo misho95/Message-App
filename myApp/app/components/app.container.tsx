@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    fontFamily: 'NotoSansGeorgian',
+    fontFamily: 'NotoSansGeorgian-Medium',
   },
 });
 
