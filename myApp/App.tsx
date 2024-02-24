@@ -6,6 +6,7 @@ import LoginScreen from './app/pages/forms/login.screen.page';
 import IndexScreen from './app/pages/home.screen/index.screen';
 import RegistrationScreen from './app/pages/forms/registration.screen';
 import ResetScreen from './app/pages/forms/reset.screen';
+import './lang-service/i18n';
 
 function App() {
   const auth = true;
