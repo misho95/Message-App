@@ -3,6 +3,14 @@
     "home": "მთავარი",
     "search" : "ძებნა",
     "favorite" : "ფავორიტები",
-    "profile" : "პროფილი"
+    "profile" : "პროფილი",
+    "login": "შესვლა",
+    "remember": "დამახსოვრება",
+    "lostPassword" : "დაგავიწყდა პაროლი?",
+    "registration" : "რეგისტრატიცა",
+    "areYouNewToKidNest" : "ახალი ხარ KidNest Loyal-ში?",
+    "now" : "ახლავე",
+    "email" : "ელ-ფოსტა",
+    "password" : "პაროლი"
 }
   

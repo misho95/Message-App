@@ -32,7 +32,7 @@ const AppHeader = ({navigation}) => {
             data={Object.keys(languageResources)}
             renderItem={({item}) => (
               <Pressable style={styles.lngList} onPress={() => changeLng(item)}>
-                <Text style={styles.lngText}>{item}</Text>
+                <Text style={styles.lngText}>{item.toUpperCase()}</Text>
               </Pressable>
             )}
           />

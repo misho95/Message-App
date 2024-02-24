@@ -3,6 +3,14 @@
     "home": "Home",
     "search" : "Search",
     "favorite" : "Favorite",
-    "profile" : "Profile"
+    "profile" : "Profile",
+    "login": "Login",
+    "remember": "Remember",
+    "lostPassword" : "Lost Password?",
+    "registration" : "Registration",
+    "areYouNewToKidNest" : "Are you new to KidNest Loyal?",
+    "now" : "Now",
+    "email" : "Email",
+    "password" : "Password"
 }
   
