@@ -4,9 +4,11 @@ import ProfileStack from './pages/profile/profile.stack';
 import SearchScreen from './pages/search.screen';
 import FavScreen from './pages/fav.screen';
 import {Image} from 'react-native';
+import {useTranslation} from 'react-i18next';
 
 const IndexScreen = () => {
   const Tab = createBottomTabNavigator();
+  const {t} = useTranslation();
 
   return (
     <Tab.Navigator
@@ -30,7 +32,7 @@ const IndexScreen = () => {
               />
             ),
         }}
-        name="მთავარი"
+        name={t('home')}
         component={HomeScreen}
       />
       <Tab.Screen
@@ -44,7 +46,7 @@ const IndexScreen = () => {
               <Image source={require('../../assets/icons/tabs/search.png')} />
             ),
         }}
-        name="ძიება"
+        name={t('search')}
         component={SearchScreen}
       />
       <Tab.Screen
@@ -58,7 +60,7 @@ const IndexScreen = () => {
               <Image source={require('../../assets/icons/tabs/sparkle.png')} />
             ),
         }}
-        name="ფავორიტები"
+        name={t('favorite')}
         component={FavScreen}
       />
       <Tab.Screen
@@ -72,7 +74,7 @@ const IndexScreen = () => {
               <Image source={require('../../assets/icons/tabs/profile.png')} />
             ),
         }}
-        name="პროფილი"
+        name={t('profile')}
         component={ProfileStack}
       />
     </Tab.Navigator>

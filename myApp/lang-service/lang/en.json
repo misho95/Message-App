@@ -1,5 +1,8 @@
 
 {
-    "home": "Home"
+    "home": "Home",
+    "search" : "Search",
+    "favorite" : "Favorite",
+    "profile" : "Profile"
 }
   

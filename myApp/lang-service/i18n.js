@@ -4,8 +4,8 @@ import en from './lang/en.json'
 import ge from './lang/ge.json'
 
 export const languageResources = {
-  en: { translation: en},
   ge: {translation: ge},
+  en: { translation: en},
 }
 
 i18next.use(initReactI18next).init({

@@ -45,12 +45,21 @@ const AppHeader = ({navigation}) => {
           style={{width: 130, height: 42}}
         />
       </Pressable>
-      <Pressable onPress={() => setOpenModal(true)}>
-        <Image
-          source={require('../../assets/imgs/flag.png')}
-          style={{width: 33, height: 22}}
-        />
-      </Pressable>
+      {lang === 'ge' ? (
+        <Pressable onPress={() => setOpenModal(true)}>
+          <Image
+            source={require('../../assets/imgs/ge-flag.png')}
+            style={{width: 33, height: 22}}
+          />
+        </Pressable>
+      ) : (
+        <Pressable onPress={() => setOpenModal(true)}>
+          <Image
+            source={require('../../assets/imgs/en-flag.png')}
+            style={{width: 33, height: 22}}
+          />
+        </Pressable>
+      )}
     </View>
   );
 };
