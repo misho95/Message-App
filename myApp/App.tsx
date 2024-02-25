@@ -9,7 +9,7 @@ import ResetScreen from './app/pages/forms/reset.screen';
 import './lang-service/i18n';
 
 function App() {
-  const auth = false;
+  const auth = true;
 
   const Stack = createNativeStackNavigator();
 

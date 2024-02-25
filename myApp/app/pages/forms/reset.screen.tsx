@@ -11,6 +11,7 @@ import {
   useBlurOnFulfill,
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
+import {useTranslation} from 'react-i18next';
 
 type PropsType = {
   navigation: any;
@@ -19,6 +20,7 @@ type PropsType = {
 const CELL_COUNT = 6;
 
 const ResetScreen = ({navigation}: PropsType) => {
+  const {t} = useTranslation();
   const [type, setType] = useState('email');
   const [credentials, setCredentials] = useState('');
   const [value, setValue] = useState('');
@@ -32,21 +34,21 @@ const ResetScreen = ({navigation}: PropsType) => {
     <>
       <FormsContainer
         navigation={navigation}
-        title={'პაროლის აღდგენა'}
+        title={t('forms.passwordRecovery')}
         height={{minHeight: 595, maxHeight: 645}}>
         <View style={styles.container}>
           {/* inputs */}
           <View style={{paddingVertical: 15, flex: 1, gap: 15}}>
             <FormsRadioGroup defVal={type} onChange={setType}>
-              <FormsRadio title={'იმეილით'} value={'email'} />
-              <FormsRadio title={'მობილურის ნომრით'} value={'mobile'} />
+              <FormsRadio title={t('forms.email')} value={'email'} />
+              <FormsRadio title={t('forms.mobile')} value={'mobile'} />
             </FormsRadioGroup>
             {type === 'email' ? (
               <View style={styles.relativeView}>
                 <FormInputs
                   value={credentials}
                   onChange={text => setCredentials(text)}
-                  placeholder={'ელ-ფოსტა'}
+                  placeholder={t('forms.email')}
                 />
                 {credentials && (
                   <Pressable style={styles.absoluteButton}>
@@ -55,7 +57,7 @@ const ResetScreen = ({navigation}: PropsType) => {
                 )}
               </View>
             ) : (
-              <FormInputs placeholder={'მობილურის ნომერი'} />
+              <FormInputs placeholder={t('forms.mobile')} />
             )}
             {/*  */}
             <CodeField
@@ -78,21 +80,21 @@ const ResetScreen = ({navigation}: PropsType) => {
               )}
             />
             {/*  */}
-            <FormInputs secured={true} placeholder={'პაროლი'} />
-            <FormInputs secured={true} placeholder={'გაიმეორე პაროლი'} />
+            <FormInputs secured={true} placeholder={t('forms.password')} />
+            <FormInputs secured={true} placeholder={t('forms.rePassword')} />
           </View>
           {/*  bottom */}
           <View style={styles.flexRow}>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 6}}>
-              <Text style={{color: '#999999'}}>დამახსოვრება</Text>
+              <Text style={{color: '#999999'}}>{t('forms.remember')}</Text>
             </View>
             <Text
               style={{color: '#999999'}}
               onPress={() => navigation.navigate('Reset')}>
-              დაგავიწყდა პაროლი?
+              {t('forms.lostPassword')}
             </Text>
           </View>
-          <PinkButton title="შესვლა" />
+          <PinkButton title={t('login')} />
           <Text
             style={{
               fontSize: 12,
@@ -100,14 +102,14 @@ const ResetScreen = ({navigation}: PropsType) => {
               width: '80%',
               alignSelf: 'center',
             }}>
-            უკვე გაქვთ ანგარიში KidNest Loyal-ში? გაიარე
+            {t('forms.alreadyHaveAnAccountKidnest')} {t('forms.pass')}
             <Text
               style={{color: '#B244A2'}}
               onPress={() => {
                 navigation.navigate('Login');
               }}>
               {' '}
-              ავტორიზაცია
+              {t('forms.auth')}
             </Text>
           </Text>
         </View>

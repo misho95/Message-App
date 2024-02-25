@@ -3,7 +3,7 @@ import HomeScreen from './pages/home.screen';
 import ProfileStack from './pages/profile/profile.stack';
 import SearchScreen from './pages/search.screen';
 import FavScreen from './pages/fav.screen';
-import {Image} from 'react-native';
+import {Image, Platform} from 'react-native';
 import {useTranslation} from 'react-i18next';
 
 const IndexScreen = () => {
@@ -17,7 +17,10 @@ const IndexScreen = () => {
         headerShown: false,
         tabBarActiveTintColor: '#B244A2',
         tabBarInactiveTintColor: '#637381',
-        tabBarStyle: {height: 81, paddingBottom: 20},
+        tabBarStyle:
+          Platform.OS === 'ios'
+            ? {height: 101, paddingBottom: 40}
+            : {height: 81, paddingBottom: 20},
       }}>
       <Tab.Screen
         options={{

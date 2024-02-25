@@ -8,6 +8,7 @@ import {
   FlatList,
   Text,
   SafeAreaView,
+  ImageBackground,
 } from 'react-native';
 import i18n, {languageResources} from '../../../lang-service/i18n';
 import {changeLanguage} from 'i18next';
@@ -26,17 +27,24 @@ const AppHeader = ({navigation}) => {
   return (
     <View style={styles.header}>
       <Modal visible={openModal} onRequestClose={() => setOpenModal(false)}>
-        <SafeAreaView style={styles.languageList}>
-          <FlatList
-            style={styles.langFlatList}
-            data={Object.keys(languageResources)}
-            renderItem={({item}) => (
-              <Pressable style={styles.lngList} onPress={() => changeLng(item)}>
-                <Text style={styles.lngText}>{item.toUpperCase()}</Text>
-              </Pressable>
-            )}
-          />
-        </SafeAreaView>
+        <ImageBackground
+          source={require('../../assets/imgs/bg-form.png')}
+          resizeMode="cover"
+          style={styles.background}>
+          <SafeAreaView style={styles.languageList}>
+            <FlatList
+              style={styles.langFlatList}
+              data={Object.keys(languageResources)}
+              renderItem={({item}) => (
+                <Pressable
+                  style={styles.lngList}
+                  onPress={() => changeLng(item)}>
+                  <Text style={styles.lngText}>{item.toUpperCase()}</Text>
+                </Pressable>
+              )}
+            />
+          </SafeAreaView>
+        </ImageBackground>
       </Modal>
       <Pressable
         onPress={() => navigation.navigate(auth ? 'მთავარი' : 'login')}>
@@ -71,20 +79,23 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  background: {
+    flex: 1,
+  },
   languageList: {
     flex: 1,
-    backgroundColor: '#6258e8',
   },
   langFlatList: {
-    padding: 10,
+    flex: 1,
+    padding: 20,
   },
   lngList: {
     borderBottomWidth: 1,
-    borderColor: '#fff',
-    padding: 10,
+    borderColor: 'black',
   },
   lngText: {
-    color: '#fff',
+    padding: 10,
+    color: 'black',
   },
 });
 

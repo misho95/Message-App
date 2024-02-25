@@ -32,7 +32,7 @@ const FormsRadioGroup = ({children, defVal, onChange}: PropsType) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    gap: 5,
+    gap: 8,
     justifyContent: 'space-between',
   },
 });

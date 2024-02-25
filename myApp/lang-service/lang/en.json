@@ -17,8 +17,11 @@
         "auth": "Authorization",
         "now" : "Now",
         "email" : "Email",
+        "mobile" : "Mobile",
         "password" : "Password",
-        "rePassword" : "Repeat password"
+        "rePassword" : "Repeat password",
+        "passwordRecovery" : "Password Recovery"
+
     }
 }
   
