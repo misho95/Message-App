@@ -32,7 +32,7 @@ const IndexScreen = () => {
               />
             ),
         }}
-        name={t('home')}
+        name={t('nav.home')}
         component={HomeScreen}
       />
       <Tab.Screen
@@ -46,7 +46,7 @@ const IndexScreen = () => {
               <Image source={require('../../assets/icons/tabs/search.png')} />
             ),
         }}
-        name={t('search')}
+        name={t('nav.search')}
         component={SearchScreen}
       />
       <Tab.Screen
@@ -60,7 +60,7 @@ const IndexScreen = () => {
               <Image source={require('../../assets/icons/tabs/sparkle.png')} />
             ),
         }}
-        name={t('favorite')}
+        name={t('nav.favorite')}
         component={FavScreen}
       />
       <Tab.Screen
@@ -74,7 +74,7 @@ const IndexScreen = () => {
               <Image source={require('../../assets/icons/tabs/profile.png')} />
             ),
         }}
-        name={t('profile')}
+        name={t('nav.profile')}
         component={ProfileStack}
       />
     </Tab.Navigator>

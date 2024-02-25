@@ -1,16 +1,24 @@
 
 {
-    "home": "მთავარი",
-    "search" : "ძებნა",
-    "favorite" : "ფავორიტები",
-    "profile" : "პროფილი",
-    "login": "შესვლა",
-    "remember": "დამახსოვრება",
-    "lostPassword" : "დაგავიწყდა პაროლი?",
-    "registration" : "რეგისტრატიცა",
-    "areYouNewToKidNest" : "ახალი ხარ KidNest Loyal-ში?",
-    "now" : "ახლავე",
-    "email" : "ელ-ფოსტა",
-    "password" : "პაროლი"
+    "nav" : {
+        "home": "მთავარი",
+        "search" : "ძებნა",
+        "favorite" : "ფავორიტები",
+        "profile" : "პროფილი"
+    },
+    "forms" : {
+        "login": "შესვლა",
+        "remember": "დამახსოვრება",
+        "lostPassword" : "დაგავიწყდა პაროლი?",
+        "registration" : "რეგისტრატიცა",
+        "areYouNewToKidNest" : "ახალი ხარ KidNest Loyal-ში?",
+        "alreadyHaveAnAccountKidnest" : "უკვე გაქვთ ანგარიში KidNest Loyal-ში?",
+        "pass": "გაიარეთ",
+        "auth" : "ავტორიზაცია",
+        "now" : "ახლავე",
+        "email" : "ელ-ფოსტა",
+        "password" : "პაროლი",
+        "rePassword" : "გაიმეორე პაროლი"
+    }
 }
   

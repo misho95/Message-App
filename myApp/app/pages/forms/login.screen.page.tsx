@@ -15,26 +15,26 @@ const LoginScreen = ({navigation}: PropsType) => {
     <>
       <FormsContainer
         navigation={navigation}
-        title={t('login')}
+        title={t('forms.login')}
         height={{minHeight: 455, maxHeight: 505}}>
         <View style={styles.container}>
           {/* inputs */}
           <View style={{paddingVertical: 15, flex: 1, gap: 15}}>
-            <FormInputs secured={false} placeholder={t('email')} />
-            <FormInputs secured={true} placeholder={t('password')} />
+            <FormInputs secured={false} placeholder={t('forms.email')} />
+            <FormInputs secured={true} placeholder={t('forms.password')} />
           </View>
           {/*  bottom */}
           <View style={styles.flexRow}>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 6}}>
-              <Text style={{color: '#999999'}}>{t('rememeber')}</Text>
+              <Text style={{color: '#999999'}}>{t('forms.remember')}</Text>
             </View>
             <Text
               style={{color: '#999999'}}
               onPress={() => navigation.navigate('Reset')}>
-              {t('lostPassword')}
+              {t('forms.lostPassword')}
             </Text>
           </View>
-          <PinkButton title={t('login')} />
+          <PinkButton title={t('forms.login')} />
           <Text
             style={{
               fontSize: 12,
@@ -42,15 +42,15 @@ const LoginScreen = ({navigation}: PropsType) => {
               width: '80%',
               alignSelf: 'center',
             }}>
-            {t('areYouNewToKidNest')}{' '}
+            {t('forms.areYouNewToKidNest')}{' '}
             <Text
               style={{color: '#B244A2'}}
               onPress={() => {
                 navigation.navigate('Registration');
               }}>
-              {t('registration')}
+              {t('forms.registration')}
             </Text>{' '}
-            {t('now')}
+            {t('forms.now')}
           </Text>
         </View>
       </FormsContainer>

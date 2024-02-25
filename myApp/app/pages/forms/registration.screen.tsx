@@ -2,37 +2,40 @@ import {StyleSheet, Text, View} from 'react-native';
 import FormInputs from '../../components/forms/forms.input';
 import FormsContainer from '../../components/forms/forms.container';
 import PinkButton from '../../components/forms/pink.button';
+import {useTranslation} from 'react-i18next';
 
 type PropsType = {
   navigation: any;
 };
 
 const RegistrationScreen = ({navigation}: PropsType) => {
+  const {t} = useTranslation();
+
   return (
     <>
       <FormsContainer
         navigation={navigation}
-        title={'რეგისტრაცია'}
+        title={t('forms.registration')}
         height={{minHeight: 525, maxHeight: 575}}>
         <View style={styles.container}>
           {/* inputs */}
           <View style={{paddingVertical: 15, flex: 1, gap: 15}}>
-            <FormInputs secured={false} placeholder={'ელ-ფოსტა'} />
-            <FormInputs secured={true} placeholder={'პაროლი'} />
-            <FormInputs secured={true} placeholder={'გაიმეორე პაროლი'} />
+            <FormInputs secured={false} placeholder={t('forms.email')} />
+            <FormInputs secured={true} placeholder={t('forms.password')} />
+            <FormInputs secured={true} placeholder={t('forms.rePassword')} />
           </View>
           {/*  bottom */}
           <View style={styles.flexRow}>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 6}}>
-              <Text style={{color: '#999999'}}>დამახსოვრება</Text>
+              <Text style={{color: '#999999'}}>{t('forms.remember')}</Text>
             </View>
             <Text
               style={{color: '#999999'}}
               onPress={() => navigation.navigate('Reset')}>
-              დაგავიწყდა პაროლი?
+              {t('forms.lostPassword')}
             </Text>
           </View>
-          <PinkButton title="შესვლა" />
+          <PinkButton title={t('forms.login')} />
           <Text
             style={{
               fontSize: 12,
@@ -40,14 +43,14 @@ const RegistrationScreen = ({navigation}: PropsType) => {
               width: '80%',
               alignSelf: 'center',
             }}>
-            უკვე გაქვთ ანგარიში KidNest Loyal-ში? გაიარე
+            {t('forms.alreadyHaveAnAccountKidnest')} {t('forms.pass')}
             <Text
               style={{color: '#B244A2'}}
               onPress={() => {
                 navigation.navigate('Login');
               }}>
               {' '}
-              ავტორიზაცია
+              {t('forms.auth')}
             </Text>
           </Text>
         </View>

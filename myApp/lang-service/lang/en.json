@@ -1,16 +1,24 @@
 
 {
-    "home": "Home",
-    "search" : "Search",
-    "favorite" : "Favorite",
-    "profile" : "Profile",
-    "login": "Login",
-    "remember": "Remember",
-    "lostPassword" : "Lost Password?",
-    "registration" : "Registration",
-    "areYouNewToKidNest" : "Are you new to KidNest Loyal?",
-    "now" : "Now",
-    "email" : "Email",
-    "password" : "Password"
+    "nav" : {
+        "home": "Home",
+        "search" : "Search",
+        "favorite" : "Favorite",
+        "profile" : "Profile"
+    },
+    "forms" : {
+        "login": "Login",
+        "remember": "Remember",
+        "lostPassword" : "Lost Password?",
+        "registration" : "Registration",
+        "areYouNewToKidNest" : "Are you new to KidNest Loyal?",
+        "alreadyHaveAnAccountKidnest" : "Already have an account in KidNest Loyal?",
+        "pass" : "Pass the",
+        "auth": "Authorization",
+        "now" : "Now",
+        "email" : "Email",
+        "password" : "Password",
+        "rePassword" : "Repeat password"
+    }
 }
   
