@@ -1,18 +1,19 @@
 import {useState} from 'react';
-import {
-  Image,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, Pressable, StyleSheet, TextInput, View} from 'react-native';
 
 type PropsType = {
-  secured: boolean;
-  placeholder: string;
+  secured?: boolean;
+  placeholder?: string;
+  value?: string;
+  onChange?: (arg: string) => void;
 };
 
-const FormInputs = ({secured, placeholder}: PropsType) => {
+const FormInputs = ({
+  secured = false,
+  placeholder,
+  value,
+  onChange,
+}: PropsType) => {
   const [hide, setHide] = useState(secured);
 
   return (
@@ -21,11 +22,13 @@ const FormInputs = ({secured, placeholder}: PropsType) => {
         style={styles.input}
         placeholder={placeholder}
         secureTextEntry={hide}
+        value={value}
+        onChangeText={onChange}
       />
       {secured && (
-        <TouchableOpacity style={styles.icon} onPress={() => setHide(!hide)}>
+        <Pressable style={styles.icon} onPress={() => setHide(!hide)}>
           <Image source={require('../../assets/imgs/eye-slash.png')} />
-        </TouchableOpacity>
+        </Pressable>
       )}
     </View>
   );
