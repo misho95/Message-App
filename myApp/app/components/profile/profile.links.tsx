@@ -1,4 +1,11 @@
-import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
 const linksList = [
   {
@@ -11,25 +18,51 @@ const linksList = [
     id: 2,
     title: 'ლოიალობის შესახებ',
     url: 'Profile.About',
-    icon: <Image source={require('../../assets/icons/user.png')} />,
+    icon: <Image source={require('../../assets/icons/logo.png')} />,
+  },
+  {
+    id: 3,
+    title: 'ლოიალობის შესახებ',
+    url: 'Profile.About',
+    icon: <Image source={require('../../assets/icons/logo.png')} />,
+  },
+  {
+    id: 4,
+    title: 'ლოიალობის შესახებ',
+    url: 'Profile.About',
+    icon: <Image source={require('../../assets/icons/logo.png')} />,
+  },
+  {
+    id: 5,
+    title: 'ლოიალობის შესახებ',
+    url: 'Profile.About',
+    icon: <Image source={require('../../assets/icons/logo.png')} />,
+  },
+  {
+    id: 6,
+    title: 'ლოიალობის შესახებ',
+    url: 'Profile.About',
+    icon: <Image source={require('../../assets/icons/logo.png')} />,
   },
 ];
 
 const ProfileLinks = ({navigation}) => {
   return (
-    <View style={styles.container}>
-      {linksList.map(link => {
-        return (
-          <Pressable
-            style={styles.nav}
-            key={link.id}
-            onPress={() => navigation.navigate(link.url)}>
-            {link.icon}
-            <Text>{link.title}</Text>
-          </Pressable>
-        );
-      })}
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        {linksList.map(link => {
+          return (
+            <Pressable
+              style={styles.nav}
+              key={link.id}
+              onPress={() => navigation.navigate(link.url)}>
+              {link.icon}
+              <Text>{link.title}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+    </ScrollView>
   );
 };
 
@@ -38,6 +71,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
     gap: 10,
+    paddingVertical: 10,
   },
   nav: {
     width: '98%',
