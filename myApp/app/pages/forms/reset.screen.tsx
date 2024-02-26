@@ -35,7 +35,7 @@ const ResetScreen = ({navigation}: PropsType) => {
       <FormsContainer
         navigation={navigation}
         title={t('forms.passwordRecovery')}
-        height={{minHeight: 595, maxHeight: 645}}>
+        height={{minHeight: 615, maxHeight: 645}}>
         <View style={styles.container}>
           {/* inputs */}
           <View style={{paddingVertical: 15, flex: 1, gap: 15}}>

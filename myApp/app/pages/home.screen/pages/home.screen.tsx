@@ -1,7 +1,7 @@
 import {
   ImageBackground,
   Pressable,
-  SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -9,13 +9,14 @@ import {
 import AppContainer from '../../../components/app.container';
 import {useTranslation} from 'react-i18next';
 import IndexSwiper from '../../../components/index.swiper';
+import OffersList from '../../../components/offers.list';
 
 const HomeScreen = ({navigation}) => {
   const {t} = useTranslation();
 
   return (
     <AppContainer navigation={navigation}>
-      <View style={{flexDirection: 'column', gap: 10}}>
+      <View style={{flex: 1, flexDirection: 'column', gap: 10}}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Text style={styles.bigTitle}>{t('home.dailyOffer')}</Text>
           <Pressable>
@@ -27,6 +28,26 @@ const HomeScreen = ({navigation}) => {
           source={require('../../../assets/imgs/daily.png')}>
           <IndexSwiper />
         </ImageBackground>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Text style={styles.bigTitle}>{t('home.yourOffers')}</Text>
+          <Pressable>
+            <Text style={styles.smallTitle}>{t('home.seeAll')}</Text>
+          </Pressable>
+        </View>
+        <ScrollView>
+          <View style={{flex: 1, flexDirection: 'column', gap: 10}}>
+            <OffersList />
+            <OffersList />
+            <OffersList />
+            <OffersList />
+            <OffersList />
+            <OffersList />
+            <OffersList />
+            <OffersList />
+            <OffersList />
+            <OffersList />
+          </View>
+        </ScrollView>
       </View>
     </AppContainer>
   );

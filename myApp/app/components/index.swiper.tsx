@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import Swiper from 'react-native-swiper';
 
 const IndexSwiper = () => {
@@ -9,13 +9,25 @@ const IndexSwiper = () => {
       autoplay
       activeDotColor="#fff">
       <View style={styles.slide}>
-        <Text style={styles.text}>Hello Swiper</Text>
+        <View style={styles.container}>
+          <Image source={require('../assets/imgs/logo.png')} />
+          <Text style={styles.text}>კომპანიის სახელი</Text>
+        </View>
+        <Text style={styles.discount}>20%</Text>
       </View>
       <View style={styles.slide}>
-        <Text style={styles.text}>Beautiful</Text>
+        <View style={styles.container}>
+          <Image source={require('../assets/imgs/logo.png')} />
+          <Text style={styles.text}>კომპანიის სახელი</Text>
+        </View>
+        <Text style={styles.discount}>10%</Text>
       </View>
       <View style={styles.slide}>
-        <Text style={styles.text}>And simple</Text>
+        <View style={styles.container}>
+          <Image source={require('../assets/imgs/logo.png')} />
+          <Text style={styles.text}>კომპანიის სახელი</Text>
+        </View>
+        <Text style={styles.discount}>15%</Text>
       </View>
     </Swiper>
   );
@@ -25,13 +37,21 @@ const styles = StyleSheet.create({
   wrapper: {},
   slide: {
     flex: 1,
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
+    paddingRight: 40,
+    paddingLeft: 20,
   },
+  container: {flexDirection: 'row', gap: 10, alignItems: 'center'},
   text: {
     color: '#fff',
-    fontSize: 30,
-    fontWeight: 'bold',
+    fontSize: 16,
+    fontWeight: 'normal',
+  },
+  discount: {
+    color: '#fff',
+    fontSize: 20,
   },
 });
 
