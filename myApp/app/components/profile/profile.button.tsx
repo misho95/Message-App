@@ -22,6 +22,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#212B36',
     borderRadius: 8,
     gap: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   text: {
     color: '#FFFFFF',

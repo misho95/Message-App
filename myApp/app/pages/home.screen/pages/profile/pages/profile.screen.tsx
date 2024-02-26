@@ -1,15 +1,23 @@
-import {Button, Text, View} from 'react-native';
+import {Button, Image, Text, View} from 'react-native';
 import ProfileButton from '../../../../../components/profile/profile.button';
 import AppContainer from '../../../../../components/app.container';
+import ProfileAccount from '../../../../../components/profile/profile.account';
 
 const ProfileScreen = ({navigation}) => {
   return (
     <AppContainer navigation={navigation}>
       <View style={{flex: 1}}>
         <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
-          <ProfileButton title={'გამოსვლა'} />
+          <ProfileButton
+            title={'გამოსვლა'}
+            icon={
+              <Image
+                source={require('../../../../../assets/icons/log-out.png')}
+              />
+            }
+          />
         </View>
-        <Text>Profile Screen</Text>
+        <ProfileAccount />
         <Button
           title="Profile"
           onPress={() => navigation.navigate('Profile.Detaile')}
