@@ -1,12 +1,13 @@
-import {Button, Image, Text, View} from 'react-native';
+import {Button, Image, Pressable, Text, View} from 'react-native';
 import ProfileButton from '../../../../../components/profile/profile.button';
 import AppContainer from '../../../../../components/app.container';
 import ProfileAccount from '../../../../../components/profile/profile.account';
+import ProfileLinks from '../../../../../components/profile/profile.links';
 
 const ProfileScreen = ({navigation}) => {
   return (
     <AppContainer navigation={navigation}>
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, flexDirection: 'column', gap: 30}}>
         <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
           <ProfileButton
             title={'გამოსვლა'}
@@ -18,7 +19,8 @@ const ProfileScreen = ({navigation}) => {
           />
         </View>
         <ProfileAccount />
-        <Button
+        <ProfileLinks navigation={navigation} />
+        {/* <Button
           title="Profile"
           onPress={() => navigation.navigate('Profile.Detaile')}
         />
@@ -37,7 +39,7 @@ const ProfileScreen = ({navigation}) => {
         <Button
           title="Contact"
           onPress={() => navigation.navigate('Profile.Contact')}
-        />
+        /> */}
       </View>
     </AppContainer>
   );

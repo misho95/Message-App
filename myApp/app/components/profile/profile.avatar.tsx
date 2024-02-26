@@ -8,7 +8,10 @@ type PropsType = {
 
 const ProfileAvatar = ({url, width, height}: PropsType) => {
   return (
-    <Image style={{...styles.avatar, width, height}} source={require(url)} />
+    <Image
+      style={width && height ? {width, height} : styles.avatar}
+      source={require('../../assets/imgs/Avatar.png')}
+    />
   );
 };
 
@@ -16,6 +19,7 @@ const styles = StyleSheet.create({
   avatar: {
     width: 20,
     height: 20,
+    borderRadius: 99,
   },
 });
 
