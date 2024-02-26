@@ -8,15 +8,20 @@ import {
 } from 'react-native';
 import AppContainer from '../../../components/app.container';
 import {useTranslation} from 'react-i18next';
-import IndexSwiper from '../../../components/index.swiper';
 import OffersList from '../../../components/offers.list';
+import OffersSwiper from '../../../components/offers.swiper';
 
 const HomeScreen = ({navigation}) => {
   const {t} = useTranslation();
 
   return (
     <AppContainer navigation={navigation}>
-      <View style={{flex: 1, flexDirection: 'column', gap: 10}}>
+      <View
+        style={{
+          flex: 1,
+          flexDirection: 'column',
+          gap: 10,
+        }}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Text style={styles.bigTitle}>{t('home.dailyOffer')}</Text>
           <Pressable>
@@ -26,7 +31,7 @@ const HomeScreen = ({navigation}) => {
         <ImageBackground
           style={styles.sliderBG}
           source={require('../../../assets/imgs/daily.png')}>
-          <IndexSwiper />
+          <OffersSwiper />
         </ImageBackground>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Text style={styles.bigTitle}>{t('home.yourOffers')}</Text>
