@@ -2,6 +2,38 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "app/assets/fonts/NotoSansGeorgian-Bold.ttf",
+      "sha1": "2d0b2dcd00cc535db88c480612c8012579d69ce4"
+    },
+    {
+      "path": "app/assets/fonts/NotoSansGeorgian-ExtraBold.ttf",
+      "sha1": "94db272c6ce11f8e99f01022cda2fa2715beab41"
+    },
+    {
+      "path": "app/assets/fonts/NotoSansGeorgian-ExtraLight.ttf",
+      "sha1": "5bbcebe21e32126274f7ef7c49b0f1131add327b"
+    },
+    {
+      "path": "app/assets/fonts/NotoSansGeorgian-Light.ttf",
+      "sha1": "f59da2f4d59ca3686bcc5061a2fee788f95cb307"
+    },
+    {
+      "path": "app/assets/fonts/NotoSansGeorgian-Medium.ttf",
+      "sha1": "b5520853a38adcf0aeb502a5cd7d468b749e94bf"
+    },
+    {
+      "path": "app/assets/fonts/NotoSansGeorgian-Regular.ttf",
+      "sha1": "e96e37eed8b5a0fc31f50646f01e8087e6b94648"
+    },
+    {
+      "path": "app/assets/fonts/NotoSansGeorgian-SemiBold.ttf",
+      "sha1": "012c40789d9b4160bfdc44051a9db5bbb867e5de"
+    },
+    {
+      "path": "app/assets/fonts/NotoSansGeorgian-Thin.ttf",
+      "sha1": "ec5f1b0f3087711d313f3f2078066321293bb293"
+    },
+    {
       "path": "app/assets/fonts/NotoSansGeorgian-VariableFont_wdth,wght.ttf",
       "sha1": "58bb562ce0397f76f35ef3acf26a91ebed6050f6"
     }

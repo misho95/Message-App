@@ -21,7 +21,10 @@
         "password" : "Password",
         "rePassword" : "Repeat password",
         "passwordRecovery" : "Password Recovery"
-
+    },
+    "home" : {
+        "dailyOffer" : "Daily Offers",
+        "seeAll": "See all"
     }
 }
   

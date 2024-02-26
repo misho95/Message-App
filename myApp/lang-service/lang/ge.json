@@ -21,6 +21,10 @@
         "password" : "პაროლი",
         "rePassword" : "გაიმეორე პაროლი",
         "passwordRecovery" : "პაროლის აღდგენა"
+    },
+    "home" : {
+        "dailyOffer" : "დღის შეთავაზება",
+        "seeAll": "ყველას ნახვა"
     }
 }
   

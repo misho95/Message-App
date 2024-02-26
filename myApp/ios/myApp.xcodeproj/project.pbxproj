@@ -15,6 +15,14 @@
 		7699B88040F8A987B510C191 /* libPods-myApp-myAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-myApp-myAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8112126AACD44D04848CC01C /* NotoSansGeorgian-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A4D019517BD48BB86250706 /* NotoSansGeorgian-VariableFont_wdth,wght.ttf */; };
+		E8A54CE94EAE414EB6544563 /* NotoSansGeorgian-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD6B709C0C0D4F67B837D5B9 /* NotoSansGeorgian-Bold.ttf */; };
+		7E3D3205E295446682F937F1 /* NotoSansGeorgian-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C66B7FCDBE4A5E93B071E8 /* NotoSansGeorgian-ExtraBold.ttf */; };
+		893DB78B57DF44F8993ED411 /* NotoSansGeorgian-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 136B7775FA5D422292E7664B /* NotoSansGeorgian-ExtraLight.ttf */; };
+		73414C63176143FD8B848B0E /* NotoSansGeorgian-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E2937B1DE346B79C5C8CA2 /* NotoSansGeorgian-Light.ttf */; };
+		535AD900E0774FCB85B12165 /* NotoSansGeorgian-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBA4EB727CD04691B5F3F707 /* NotoSansGeorgian-Medium.ttf */; };
+		59D8CC4278B24265B9FAC94E /* NotoSansGeorgian-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EFE1114311E4E23919BF340 /* NotoSansGeorgian-Regular.ttf */; };
+		EBB7F039A57546D68F1AE90B /* NotoSansGeorgian-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF845A61F45F432BB23D708B /* NotoSansGeorgian-SemiBold.ttf */; };
+		DB333360398E49A1B5DA7D44 /* NotoSansGeorgian-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED867A10693F4467A89377C5 /* NotoSansGeorgian-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +54,14 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-myApp-myAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApp-myAppTests.release.xcconfig"; path = "Target Support Files/Pods-myApp-myAppTests/Pods-myApp-myAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		1A4D019517BD48BB86250706 /* NotoSansGeorgian-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; name = "NotoSansGeorgian-VariableFont_wdth,wght.ttf"; path = "../app/assets/fonts/NotoSansGeorgian-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DD6B709C0C0D4F67B837D5B9 /* NotoSansGeorgian-Bold.ttf */ = {isa = PBXFileReference; name = "NotoSansGeorgian-Bold.ttf"; path = "../app/assets/fonts/NotoSansGeorgian-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		32C66B7FCDBE4A5E93B071E8 /* NotoSansGeorgian-ExtraBold.ttf */ = {isa = PBXFileReference; name = "NotoSansGeorgian-ExtraBold.ttf"; path = "../app/assets/fonts/NotoSansGeorgian-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		136B7775FA5D422292E7664B /* NotoSansGeorgian-ExtraLight.ttf */ = {isa = PBXFileReference; name = "NotoSansGeorgian-ExtraLight.ttf"; path = "../app/assets/fonts/NotoSansGeorgian-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B0E2937B1DE346B79C5C8CA2 /* NotoSansGeorgian-Light.ttf */ = {isa = PBXFileReference; name = "NotoSansGeorgian-Light.ttf"; path = "../app/assets/fonts/NotoSansGeorgian-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DBA4EB727CD04691B5F3F707 /* NotoSansGeorgian-Medium.ttf */ = {isa = PBXFileReference; name = "NotoSansGeorgian-Medium.ttf"; path = "../app/assets/fonts/NotoSansGeorgian-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2EFE1114311E4E23919BF340 /* NotoSansGeorgian-Regular.ttf */ = {isa = PBXFileReference; name = "NotoSansGeorgian-Regular.ttf"; path = "../app/assets/fonts/NotoSansGeorgian-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AF845A61F45F432BB23D708B /* NotoSansGeorgian-SemiBold.ttf */ = {isa = PBXFileReference; name = "NotoSansGeorgian-SemiBold.ttf"; path = "../app/assets/fonts/NotoSansGeorgian-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ED867A10693F4467A89377C5 /* NotoSansGeorgian-Thin.ttf */ = {isa = PBXFileReference; name = "NotoSansGeorgian-Thin.ttf"; path = "../app/assets/fonts/NotoSansGeorgian-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +171,14 @@
 			isa = "PBXGroup";
 			children = (
 				1A4D019517BD48BB86250706 /* NotoSansGeorgian-VariableFont_wdth,wght.ttf */,
+				DD6B709C0C0D4F67B837D5B9 /* NotoSansGeorgian-Bold.ttf */,
+				32C66B7FCDBE4A5E93B071E8 /* NotoSansGeorgian-ExtraBold.ttf */,
+				136B7775FA5D422292E7664B /* NotoSansGeorgian-ExtraLight.ttf */,
+				B0E2937B1DE346B79C5C8CA2 /* NotoSansGeorgian-Light.ttf */,
+				DBA4EB727CD04691B5F3F707 /* NotoSansGeorgian-Medium.ttf */,
+				2EFE1114311E4E23919BF340 /* NotoSansGeorgian-Regular.ttf */,
+				AF845A61F45F432BB23D708B /* NotoSansGeorgian-SemiBold.ttf */,
+				ED867A10693F4467A89377C5 /* NotoSansGeorgian-Thin.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -256,6 +280,14 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				8112126AACD44D04848CC01C /* NotoSansGeorgian-VariableFont_wdth,wght.ttf in Resources */,
+				E8A54CE94EAE414EB6544563 /* NotoSansGeorgian-Bold.ttf in Resources */,
+				7E3D3205E295446682F937F1 /* NotoSansGeorgian-ExtraBold.ttf in Resources */,
+				893DB78B57DF44F8993ED411 /* NotoSansGeorgian-ExtraLight.ttf in Resources */,
+				73414C63176143FD8B848B0E /* NotoSansGeorgian-Light.ttf in Resources */,
+				535AD900E0774FCB85B12165 /* NotoSansGeorgian-Medium.ttf in Resources */,
+				59D8CC4278B24265B9FAC94E /* NotoSansGeorgian-Regular.ttf in Resources */,
+				EBB7F039A57546D68F1AE90B /* NotoSansGeorgian-SemiBold.ttf in Resources */,
+				DB333360398E49A1B5DA7D44 /* NotoSansGeorgian-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

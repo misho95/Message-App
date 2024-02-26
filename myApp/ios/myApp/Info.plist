@@ -50,6 +50,14 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>NotoSansGeorgian-VariableFont_wdth,wght.ttf</string>
+		<string>NotoSansGeorgian-Bold.ttf</string>
+		<string>NotoSansGeorgian-ExtraBold.ttf</string>
+		<string>NotoSansGeorgian-ExtraLight.ttf</string>
+		<string>NotoSansGeorgian-Light.ttf</string>
+		<string>NotoSansGeorgian-Medium.ttf</string>
+		<string>NotoSansGeorgian-Regular.ttf</string>
+		<string>NotoSansGeorgian-SemiBold.ttf</string>
+		<string>NotoSansGeorgian-Thin.ttf</string>
 	</array>
 </dict>
 </plist>
