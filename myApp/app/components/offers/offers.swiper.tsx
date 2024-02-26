@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
 import Swiper from 'react-native-swiper';
-import {useLang} from '../utils/global.store';
+import {useLang} from '../../utils/global.store';
 
 const data = [
   {
@@ -44,7 +44,7 @@ const OffersSwiper = () => {
             <View style={styles.container}>
               <Image
                 style={styles.icon}
-                source={require('../assets/imgs/logo.png')}
+                source={require('../../assets/imgs/logo.png')}
               />
               <Text style={styles.text}>{offer.title[lang]}</Text>
             </View>

@@ -8,8 +8,8 @@ import {
 } from 'react-native';
 import AppContainer from '../../../components/app.container';
 import {useTranslation} from 'react-i18next';
-import OffersList from '../../../components/offers.list';
-import OffersSwiper from '../../../components/offers.swiper';
+import OffersList from '../../../components/offers/offers.list';
+import OffersSwiper from '../../../components/offers/offers.swiper';
 
 const HomeScreen = ({navigation}) => {
   const {t} = useTranslation();

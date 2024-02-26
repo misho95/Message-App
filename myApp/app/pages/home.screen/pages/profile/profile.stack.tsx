@@ -1,7 +1,7 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ProfileScreen from './pages/profile.screen';
 import ProfileDetaileScreen from './pages/profile.detaile';
-import ProfileAboutScreen from './pages/profile.about.screen';
+import ProfileAboutScreen from './pages/profile.about';
 
 const ProfileStack = () => {
   const Stack = createNativeStackNavigator();
@@ -10,7 +10,7 @@ const ProfileStack = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        contentStyle: {backgroundColor: '#fff', padding: 20},
+        contentStyle: {backgroundColor: '#fff'},
       }}
       initialRouteName={'Profile.Index'}>
       <Stack.Screen name="Profile.Index" component={ProfileScreen} />

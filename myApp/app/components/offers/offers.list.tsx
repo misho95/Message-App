@@ -1,5 +1,5 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {useLang} from '../utils/global.store';
+import {useLang} from '../../utils/global.store';
 
 const data = {
   title: {
@@ -14,7 +14,7 @@ const OffersList = () => {
   return (
     <View style={styles.container}>
       <View style={styles.flexRow}>
-        <Image source={require('../assets/imgs/logo.png')} />
+        <Image source={require('../../assets/imgs/logo.png')} />
         <Text style={styles.nameText}>{data.title[lang]}</Text>
       </View>
       <Text style={styles.discountText}>20%</Text>
