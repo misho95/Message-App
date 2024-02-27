@@ -1,68 +1,66 @@
-import {
-  Image,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-
-const linksList = [
-  {
-    id: 1,
-    title: 'პროფილი',
-    url: 'Profile.Detaile',
-    icon: <Image source={require('../../assets/icons/user.png')} />,
-  },
-  {
-    id: 2,
-    title: 'ლოიალობის შესახებ',
-    url: 'Profile.About',
-    icon: <Image source={require('../../assets/icons/logo.png')} />,
-  },
-  {
-    id: 3,
-    title: 'ლოიალობის შესახებ',
-    url: 'Profile.About',
-    icon: <Image source={require('../../assets/icons/logo.png')} />,
-  },
-  {
-    id: 4,
-    title: 'ლოიალობის შესახებ',
-    url: 'Profile.About',
-    icon: <Image source={require('../../assets/icons/logo.png')} />,
-  },
-  {
-    id: 5,
-    title: 'ლოიალობის შესახებ',
-    url: 'Profile.About',
-    icon: <Image source={require('../../assets/icons/logo.png')} />,
-  },
-  {
-    id: 6,
-    title: 'ლოიალობის შესახებ',
-    url: 'Profile.About',
-    icon: <Image source={require('../../assets/icons/logo.png')} />,
-  },
-];
+import {useState} from 'react';
+import {useTranslation} from 'react-i18next';
+import {Image, Pressable, StyleSheet, Switch, Text, View} from 'react-native';
 
 const ProfileLinks = ({navigation}) => {
+  const [dark, setDark] = useState(false);
+
+  const {t} = useTranslation();
+
+  const linksList = [
+    {
+      id: 1,
+      title: t('profileNav.profile'),
+      url: 'Profile.Detaile',
+      icon: <Image source={require('../../assets/icons/user.png')} />,
+    },
+    {
+      id: 2,
+      title: t('profileNav.about'),
+      url: 'Profile.About',
+      icon: <Image source={require('../../assets/icons/logo.png')} />,
+    },
+    {
+      id: 3,
+      title: t('profileNav.history'),
+      url: 'Profile.About',
+      icon: <Image source={require('../../assets/icons/coins.png')} />,
+    },
+    {
+      id: 4,
+      title: t('profileNav.payment'),
+      url: 'Profile.About',
+      icon: <Image source={require('../../assets/icons/credit-card.png')} />,
+    },
+    {
+      id: 5,
+      title: t('profileNav.support'),
+      url: 'Profile.About',
+      icon: <Image source={require('../../assets/icons/phone-call.png')} />,
+    },
+  ];
+
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        {linksList.map(link => {
-          return (
-            <Pressable
-              style={styles.nav}
-              key={link.id}
-              onPress={() => navigation.navigate(link.url)}>
-              {link.icon}
-              <Text>{link.title}</Text>
-            </Pressable>
-          );
-        })}
-      </View>
-    </ScrollView>
+    <View style={styles.container}>
+      {linksList.map(link => {
+        return (
+          <Pressable
+            style={styles.nav}
+            key={link.id}
+            onPress={() => navigation.navigate(link.url)}>
+            {link.icon}
+            <Text>{link.title}</Text>
+          </Pressable>
+        );
+      })}
+      <Pressable style={{...styles.nav, justifyContent: 'space-between'}}>
+        <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
+          <Image source={require('../../assets/icons/moon.png')} />
+          <Text>{t('profileNav.darkMode')}</Text>
+        </View>
+        <Switch value={dark} onChange={() => setDark(!dark)} />
+      </Pressable>
+    </View>
   );
 };
 

@@ -20,12 +20,21 @@
         "mobile" : "მობილურის ნომერი",
         "password" : "პაროლი",
         "rePassword" : "გაიმეორე პაროლი",
-        "passwordRecovery" : "პაროლის აღდგენა"
+        "passwordRecovery" : "პაროლის აღდგენა",
+        "logout" : "გასვლა"
     },
     "home" : {
         "dailyOffer" : "დღის შეთავაზება",
         "yourOffers" : "შენი შეთავაზებები",
         "seeAll": "ყველას ნახვა"
+    },
+    "profileNav" : {
+        "profile" : "პროფილი",
+        "about" : "ლოიალობის შესახებ",
+        "history" : "ტრანზაქციების ისტორია",
+        "payment" : "გადახდის მეთოდები",
+        "support" : "დახმარება",
+        "darkMode" : "მუქი ფონი"
     }
 }
   

@@ -20,12 +20,21 @@
         "mobile" : "Mobile Number",
         "password" : "Password",
         "rePassword" : "Repeat password",
-        "passwordRecovery" : "Password Recovery"
+        "passwordRecovery" : "Password Recovery",
+        "logout" : "Logout"
     },
     "home" : {
         "dailyOffer" : "Daily Offers",
         "yourOffers": "You'r Offers",
         "seeAll": "See all"
+    },
+    "profileNav" : {
+        "profile" : "Profile",
+        "about" : "About Loyal",
+        "history" : "Transaction history",
+        "payment" : "Payment methods",
+        "support" : "Support",
+        "darkMode" : "Dark mode"
     }
 }
   
