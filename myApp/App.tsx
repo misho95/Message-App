@@ -8,12 +8,33 @@ import RegistrationScreen from './app/pages/forms/registration.screen';
 import ResetScreen from './app/pages/forms/reset.screen';
 import './lang-service/i18n';
 import {useTheme} from './app/utils/global.store';
+import {useEffect} from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function App() {
   const auth = true;
 
   const Stack = createNativeStackNavigator();
-  const {theme} = useTheme();
+
+  const {theme, setTheme} = useTheme();
+
+  useEffect(() => {
+    const getTheme = async () => {
+      try {
+        const value = await AsyncStorage.getItem('theme');
+        if (value === 'light' || value === 'dark') {
+          setTheme(value);
+        }
+        if (value === null) {
+          //device preference theme
+        }
+      } catch (e) {
+        // error reading value
+      }
+    };
+
+    getTheme();
+  }, []);
 
   return (
     <NavigationContainer>
