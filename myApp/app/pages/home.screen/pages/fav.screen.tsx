@@ -1,11 +1,42 @@
-import {Button, Text, View} from 'react-native';
+import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
+import AppContainer from '../../../components/app.container';
+import {useTheme} from '../../../utils/global.store';
+import FavList from '../../../components/fav/fav.list';
 
-const FavScreen = () => {
+const FavScreen = ({navigation}) => {
+  const {theme} = useTheme();
+
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Favorite Screen</Text>
-    </View>
+    <AppContainer navigation={navigation}>
+      <View style={{flexDirection: 'column', gap: 20}}>
+        <View>
+          <Text style={theme === 'light' ? styles.title : styles.titleDark}>
+            ფავორიტები
+          </Text>
+        </View>
+        <ScrollView>
+          <View style={{flexDirection: 'column', gap: 10}}>
+            <FavList />
+            <FavList />
+            <FavList />
+            <FavList />
+          </View>
+        </ScrollView>
+      </View>
+    </AppContainer>
   );
 };
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 20,
+    lineHeight: 24,
+  },
+  titleDark: {
+    fontSize: 20,
+    lineHeight: 24,
+    color: '#fff',
+  },
+});
 
 export default FavScreen;

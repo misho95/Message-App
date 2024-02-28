@@ -35,6 +35,9 @@
         "payment" : "Payment methods",
         "support" : "Support",
         "darkMode" : "Dark mode"
-    }
+    },
+    "shared": {
+        "delete" : "Delete"
+    } 
 }
   
