@@ -1,11 +1,25 @@
-import {useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Image, Pressable, StyleSheet, Switch, Text, View} from 'react-native';
+import {useTheme} from '../../utils/global.store';
+import {useEffect} from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ProfileLinks = ({navigation}) => {
-  const [dark, setDark] = useState(false);
-
   const {t} = useTranslation();
+
+  const {theme, toggleTheme} = useTheme();
+
+  useEffect(() => {
+    const saveTheme = async () => {
+      try {
+        await AsyncStorage.setItem('theme', theme);
+      } catch (e) {
+        // saving error
+      }
+    };
+
+    saveTheme();
+  }, [theme]);
 
   const linksList = [
     {
@@ -45,20 +59,29 @@ const ProfileLinks = ({navigation}) => {
       {linksList.map(link => {
         return (
           <Pressable
-            style={styles.nav}
+            style={theme === 'light' ? styles.nav : styles.navDark}
             key={link.id}
             onPress={() => navigation.navigate(link.url)}>
             {link.icon}
-            <Text>{link.title}</Text>
+            <Text style={theme === 'dark' && styles.textDark}>
+              {link.title}
+            </Text>
           </Pressable>
         );
       })}
-      <Pressable style={{...styles.nav, justifyContent: 'space-between'}}>
+      <Pressable
+        style={
+          theme === 'light'
+            ? {...styles.nav, justifyContent: 'space-between'}
+            : {...styles.navDark, justifyContent: 'space-between'}
+        }>
         <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
           <Image source={require('../../assets/icons/moon.png')} />
-          <Text>{t('profileNav.darkMode')}</Text>
+          <Text style={theme === 'dark' && styles.textDark}>
+            {t('profileNav.darkMode')}
+          </Text>
         </View>
-        <Switch value={dark} onChange={() => setDark(!dark)} />
+        <Switch value={theme !== 'light'} onChange={() => toggleTheme()} />
       </Pressable>
     </View>
   );
@@ -85,6 +108,24 @@ const styles = StyleSheet.create({
     shadowColor: '919EAB',
     shadowOpacity: 0.08,
     shadowRadius: 2,
+  },
+  navDark: {
+    width: '98%',
+    paddingHorizontal: 23,
+    paddingVertical: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    gap: 10,
+    backgroundColor: '#27272a',
+    borderRadius: 16,
+    shadowOffset: {width: 0, height: 1},
+    shadowColor: '919EAB',
+    shadowOpacity: 0.08,
+    shadowRadius: 2,
+  },
+  textDark: {
+    color: '#fff',
   },
 });
 

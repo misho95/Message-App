@@ -1,4 +1,4 @@
-import {Button, Image, Pressable, ScrollView, Text, View} from 'react-native';
+import {Image, ScrollView, View} from 'react-native';
 import ProfileButton from '../../../../../components/profile/profile.button';
 import AppContainer from '../../../../../components/app.container';
 import ProfileAccount from '../../../../../components/profile/profile.account';

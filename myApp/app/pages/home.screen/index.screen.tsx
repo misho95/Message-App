@@ -5,14 +5,21 @@ import SearchScreen from './pages/search.screen';
 import FavScreen from './pages/fav.screen';
 import {Image, Platform} from 'react-native';
 import {useTranslation} from 'react-i18next';
+import {useTheme} from '../../utils/global.store';
 
 const IndexScreen = () => {
   const Tab = createBottomTabNavigator();
+
   const {t} = useTranslation();
+
+  const {theme} = useTheme();
 
   return (
     <Tab.Navigator
-      sceneContainerStyle={{backgroundColor: '#fff', padding: 20}}
+      sceneContainerStyle={{
+        backgroundColor: theme === 'light' ? '#fff' : '#171717',
+        padding: 20,
+      }}
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: '#B244A2',
