@@ -6,6 +6,7 @@ import FavScreen from './pages/fav.screen';
 import {Image, Platform} from 'react-native';
 import {useTranslation} from 'react-i18next';
 import {useTheme} from '../../utils/global.store';
+import StackScreen from './pages/stack.screen';
 
 const IndexScreen = () => {
   const Tab = createBottomTabNavigator();
@@ -17,7 +18,7 @@ const IndexScreen = () => {
   return (
     <Tab.Navigator
       sceneContainerStyle={{
-        backgroundColor: 'transparent',
+        backgroundColor: theme === 'light' ? '#fff' : '#171717',
         paddingHorizontal: 20,
         paddingTop: 20,
       }}
@@ -52,7 +53,7 @@ const IndexScreen = () => {
             ),
         }}
         name={t('nav.home')}
-        component={HomeScreen}
+        component={StackScreen}
       />
       <Tab.Screen
         options={{

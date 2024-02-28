@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import {useLang, useTheme} from '../../utils/global.store';
 
 const data = {
@@ -8,12 +8,14 @@ const data = {
   },
 };
 
-const OffersList = () => {
+const OffersList = ({navigation}) => {
   const {lang} = useLang();
   const {theme} = useTheme();
 
   return (
-    <View style={theme === 'light' ? styles.container : styles.containerDark}>
+    <Pressable
+      onPress={() => navigation.navigate('home/offer')}
+      style={theme === 'light' ? styles.container : styles.containerDark}>
       <View style={styles.flexRow}>
         <Image source={require('../../assets/imgs/logo.png')} />
         <Text style={theme === 'light' ? styles.nameText : styles.nameTextDark}>
@@ -26,7 +28,7 @@ const OffersList = () => {
         }>
         20%
       </Text>
-    </View>
+    </Pressable>
   );
 };
 

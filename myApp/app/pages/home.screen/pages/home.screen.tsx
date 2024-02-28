@@ -59,16 +59,16 @@ const HomeScreen = ({navigation}) => {
         </View>
         <ScrollView>
           <View style={{flex: 1, flexDirection: 'column', gap: 10}}>
-            <OffersList />
-            <OffersList />
-            <OffersList />
-            <OffersList />
-            <OffersList />
-            <OffersList />
-            <OffersList />
-            <OffersList />
-            <OffersList />
-            <OffersList />
+            <OffersList navigation={navigation} />
+            <OffersList navigation={navigation} />
+            <OffersList navigation={navigation} />
+            <OffersList navigation={navigation} />
+            <OffersList navigation={navigation} />
+            <OffersList navigation={navigation} />
+            <OffersList navigation={navigation} />
+            <OffersList navigation={navigation} />
+            <OffersList navigation={navigation} />
+            <OffersList navigation={navigation} />
           </View>
         </ScrollView>
       </View>

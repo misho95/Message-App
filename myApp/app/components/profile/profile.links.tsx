@@ -25,31 +25,31 @@ const ProfileLinks = ({navigation}) => {
     {
       id: 1,
       title: t('profileNav.profile'),
-      url: 'Profile.Detaile',
+      url: 'profile/detaile',
       icon: <Image source={require('../../assets/icons/user.png')} />,
     },
     {
       id: 2,
       title: t('profileNav.about'),
-      url: 'Profile.About',
+      url: 'profile/about',
       icon: <Image source={require('../../assets/icons/logo.png')} />,
     },
     {
       id: 3,
       title: t('profileNav.history'),
-      url: 'Profile.About',
+      url: 'profile/about',
       icon: <Image source={require('../../assets/icons/coins.png')} />,
     },
     {
       id: 4,
       title: t('profileNav.payment'),
-      url: 'Profile.About',
+      url: 'profile/about',
       icon: <Image source={require('../../assets/icons/credit-card.png')} />,
     },
     {
       id: 5,
       title: t('profileNav.support'),
-      url: 'Profile.About',
+      url: 'profile/about',
       icon: <Image source={require('../../assets/icons/phone-call.png')} />,
     },
   ];
@@ -81,7 +81,13 @@ const ProfileLinks = ({navigation}) => {
             {t('profileNav.darkMode')}
           </Text>
         </View>
-        <Switch value={theme !== 'light'} onChange={() => toggleTheme()} />
+        <Switch
+          trackColor={{false: '#A0148A', true: '#fff'}}
+          thumbColor={theme === 'light' ? '#FDC8F5' : '#262626'}
+          ios_backgroundColor="#A0148A"
+          value={theme !== 'light'}
+          onValueChange={() => toggleTheme()}
+        />
       </Pressable>
     </View>
   );

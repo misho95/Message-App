@@ -10,11 +10,14 @@ import './lang-service/i18n';
 import {useTheme} from './app/utils/global.store';
 import {useEffect} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useColorScheme} from 'react-native';
 
 function App() {
   const auth = true;
 
   const Stack = createNativeStackNavigator();
+
+  const colorScheme = useColorScheme();
 
   const {theme, setTheme} = useTheme();
 
@@ -22,11 +25,9 @@ function App() {
     const getTheme = async () => {
       try {
         const value = await AsyncStorage.getItem('theme');
-        if (value === 'light' || value === 'dark') {
-          setTheme(value);
-        }
+        setTheme(value as 'light' | 'dark');
         if (value === null) {
-          //device preference theme
+          setTheme(colorScheme as 'light' | 'dark');
         }
       } catch (e) {
         // error reading value

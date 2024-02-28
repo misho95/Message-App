@@ -12,15 +12,15 @@ const ProfileStack = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        contentStyle: {backgroundColor: 'transparent'},
+        contentStyle: {backgroundColor: theme === 'light' ? '#fff' : '#171717'},
       }}
-      initialRouteName={'Profile.Index'}>
-      <Stack.Screen name="Profile.Index" component={ProfileScreen} />
-      <Stack.Screen name="Profile.Detaile" component={ProfileDetaileScreen} />
-      <Stack.Screen name="Profile.About" component={ProfileAboutScreen} />
-      <Stack.Screen name="Profile.PaymentHistory" component={ProfileScreen} />
-      <Stack.Screen name="Profile.PaymentMethod" component={ProfileScreen} />
-      <Stack.Screen name="Profile.Contact" component={ProfileScreen} />
+      initialRouteName={'profile/index'}>
+      <Stack.Screen name="profile/index" component={ProfileScreen} />
+      <Stack.Screen name="profile/detaile" component={ProfileDetaileScreen} />
+      <Stack.Screen name="profile/about" component={ProfileAboutScreen} />
+      <Stack.Screen name="profile/paymentHistory" component={ProfileScreen} />
+      <Stack.Screen name="profile/paymentMethod" component={ProfileScreen} />
+      <Stack.Screen name="profile/contact" component={ProfileScreen} />
     </Stack.Navigator>
   );
 };
