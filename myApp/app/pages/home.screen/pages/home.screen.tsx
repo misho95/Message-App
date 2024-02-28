@@ -22,7 +22,7 @@ const HomeScreen = ({navigation}) => {
         style={{
           flex: 1,
           flexDirection: 'column',
-          gap: 10,
+          gap: 20,
         }}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Text

@@ -12,7 +12,7 @@ const ProfileStack = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        contentStyle: {backgroundColor: theme === 'light' ? '#fff' : '#171717'},
+        contentStyle: {backgroundColor: 'transparent'},
       }}
       initialRouteName={'Profile.Index'}>
       <Stack.Screen name="Profile.Index" component={ProfileScreen} />
