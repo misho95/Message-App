@@ -22,17 +22,25 @@ const IndexScreen = () => {
       }}
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#B244A2',
+        tabBarActiveTintColor: theme === 'light' ? '#B244A2' : '#fff',
         tabBarInactiveTintColor: '#637381',
         tabBarStyle:
           Platform.OS === 'ios'
-            ? {height: 101, paddingBottom: 40}
-            : {height: 81, paddingBottom: 20},
+            ? {
+                height: 101,
+                paddingBottom: 40,
+                backgroundColor: theme === 'light' ? '#fff' : '#171717',
+              }
+            : {
+                height: 81,
+                paddingBottom: 20,
+                backgroundColor: theme === 'light' ? '#fff' : '#171717',
+              },
       }}>
       <Tab.Screen
         options={{
           tabBarIcon: ({color, size}) =>
-            color === '#B244A2' ? (
+            color !== '#637381' ? (
               <Image
                 source={require('../../assets/icons/tabs/home-dash-active.png')}
               />
@@ -48,7 +56,7 @@ const IndexScreen = () => {
       <Tab.Screen
         options={{
           tabBarIcon: ({color, size}) =>
-            color === '#B244A2' ? (
+            color !== '#637381' ? (
               <Image
                 source={require('../../assets/icons/tabs/search-active.png')}
               />
@@ -62,7 +70,7 @@ const IndexScreen = () => {
       <Tab.Screen
         options={{
           tabBarIcon: ({color, size}) =>
-            color === '#B244A2' ? (
+            color !== '#637381' ? (
               <Image
                 source={require('../../assets/icons/tabs/sparkle-active.png')}
               />
@@ -76,7 +84,7 @@ const IndexScreen = () => {
       <Tab.Screen
         options={{
           tabBarIcon: ({color, size}) =>
-            color === '#B244A2' ? (
+            color !== '#637381' ? (
               <Image
                 source={require('../../assets/icons/tabs/profile-active.png')}
               />

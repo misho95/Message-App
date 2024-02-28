@@ -10,9 +10,11 @@ import AppContainer from '../../../components/app.container';
 import {useTranslation} from 'react-i18next';
 import OffersList from '../../../components/offers/offers.list';
 import OffersSwiper from '../../../components/offers/offers.swiper';
+import {useTheme} from '../../../utils/global.store';
 
 const HomeScreen = ({navigation}) => {
   const {t} = useTranslation();
+  const {theme} = useTheme();
 
   return (
     <AppContainer navigation={navigation}>
@@ -23,9 +25,17 @@ const HomeScreen = ({navigation}) => {
           gap: 10,
         }}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Text style={styles.bigTitle}>{t('home.dailyOffer')}</Text>
+          <Text
+            style={theme === 'light' ? styles.bigTitle : styles.bigTitleDark}>
+            {t('home.dailyOffer')}
+          </Text>
           <Pressable>
-            <Text style={styles.smallTitle}>{t('home.seeAll')}</Text>
+            <Text
+              style={
+                theme === 'light' ? styles.smallTitle : styles.smallTitleDark
+              }>
+              {t('home.seeAll')}
+            </Text>
           </Pressable>
         </View>
         <ImageBackground
@@ -34,9 +44,17 @@ const HomeScreen = ({navigation}) => {
           <OffersSwiper />
         </ImageBackground>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Text style={styles.bigTitle}>{t('home.yourOffers')}</Text>
+          <Text
+            style={theme === 'light' ? styles.bigTitle : styles.bigTitleDark}>
+            {t('home.yourOffers')}
+          </Text>
           <Pressable>
-            <Text style={styles.smallTitle}>{t('home.seeAll')}</Text>
+            <Text
+              style={
+                theme === 'light' ? styles.smallTitle : styles.smallTitleDark
+              }>
+              {t('home.seeAll')}
+            </Text>
           </Pressable>
         </View>
         <ScrollView>
@@ -67,9 +85,19 @@ const styles = StyleSheet.create({
     fontSize: 20,
     lineHeight: 24,
   },
+  bigTitleDark: {
+    fontSize: 20,
+    lineHeight: 24,
+    color: '#fff',
+  },
   smallTitle: {
     fontSize: 12,
     lineHeight: 24,
+  },
+  smallTitleDark: {
+    fontSize: 12,
+    lineHeight: 24,
+    color: '#fff',
   },
 });
 
