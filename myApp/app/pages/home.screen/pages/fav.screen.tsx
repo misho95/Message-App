@@ -2,19 +2,21 @@ import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
 import AppContainer from '../../../components/app.container';
 import {useTheme} from '../../../utils/global.store';
 import FavList from '../../../components/fav/fav.list';
+import {useTranslation} from 'react-i18next';
 
 const FavScreen = ({navigation}) => {
   const {theme} = useTheme();
+  const {t} = useTranslation();
 
   return (
     <AppContainer navigation={navigation}>
       <View style={{flexDirection: 'column', gap: 20}}>
         <View>
           <Text style={theme === 'light' ? styles.title : styles.titleDark}>
-            ფავორიტები
+            {t('nav.favorite')}
           </Text>
         </View>
-        <ScrollView>
+        <ScrollView style={{height: '100%'}}>
           <View style={{flexDirection: 'column', gap: 10}}>
             <FavList />
             <FavList />

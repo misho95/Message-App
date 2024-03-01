@@ -37,7 +37,8 @@
         "darkMode" : "Dark mode"
     },
     "shared": {
-        "delete" : "Delete"
+        "delete" : "Delete",
+        "goBack" : "Go Back"
     } 
 }
   

@@ -57,7 +57,7 @@ const HomeScreen = ({navigation}) => {
             </Text>
           </Pressable>
         </View>
-        <ScrollView>
+        <ScrollView style={{height: '100%'}}>
           <View style={{flex: 1, flexDirection: 'column', gap: 10}}>
             <OffersList navigation={navigation} />
             <OffersList navigation={navigation} />
