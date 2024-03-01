@@ -5,9 +5,10 @@ type PropsType = {
   title: string;
   value: string;
   edit: boolean;
+  set?: (arg: string) => void;
 };
 
-const ProfileInput = ({title, value, edit}: PropsType) => {
+const ProfileInput = ({title, value, edit, set}: PropsType) => {
   const {theme} = useTheme();
 
   return (
@@ -15,7 +16,12 @@ const ProfileInput = ({title, value, edit}: PropsType) => {
       <Text style={theme === 'light' ? styles.title : styles.titleDark}>
         {title}
       </Text>
-      <TextInput editable={edit} value={value} style={styles.input} />
+      <TextInput
+        onChangeText={text => set(text)}
+        editable={edit}
+        value={value}
+        style={styles.input}
+      />
     </View>
   );
 };
