@@ -1,13 +1,26 @@
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import AppContainer from '../../../../../components/app.container';
 import {useTheme} from '../../../../../utils/global.store';
 import ProfileInput from '../../../../../components/profile/profile.input';
 import {useState} from 'react';
 import PinkButton from '../../../../../components/shared/pink.button';
-import ProfileEditAvatar from './profile.edit.avatar';
+import {useTranslation} from 'react-i18next';
+import ProfileEditAvatar from '../../../../../components/profile/profile.edit.avatar';
 
 const ProfileEditScreen = ({navigation}) => {
   const {theme} = useTheme();
+
+  const {t} = useTranslation();
 
   const [firstName, setFirstName] = useState('მანანა');
   const [lastName, setLastName] = useState('რუსიტაშვილი');
@@ -16,22 +29,22 @@ const ProfileEditScreen = ({navigation}) => {
 
   const renderInputs = [
     {
-      title: 'სახელი',
+      title: t('profile.firstname'),
       value: firstName,
       set: setFirstName,
     },
     {
-      title: 'გვარი',
+      title: t('profile.lastname'),
       value: lastName,
       set: setLastName,
     },
     {
-      title: 'მეილი',
+      title: t('forms.email'),
       value: email,
       set: setEmail,
     },
     {
-      title: 'მობილურის ნომერი',
+      title: t('forms.mobile'),
       value: mobile,
       set: setMobile,
     },
@@ -39,26 +52,40 @@ const ProfileEditScreen = ({navigation}) => {
 
   return (
     <AppContainer navigation={navigation}>
-      <View style={{flex: 1, justifyContent: 'space-between', gap: 10}}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'space-between',
+          gap: 20,
+          paddingBottom: 10,
+        }}>
         <View style={styles.container}>
           <Text style={theme === 'light' ? styles.title : styles.titleDark}>
-            პროფილი
+            {t('profileNav.profile')}
           </Text>
           <ProfileEditAvatar />
-          <ScrollView>
-            {renderInputs.map(i => {
-              return (
-                <ProfileInput
-                  title={i.title}
-                  value={i.value}
-                  set={i.set}
-                  edit={true}
-                />
-              );
-            })}
-          </ScrollView>
+          <KeyboardAvoidingView
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            style={{flex: 1}}>
+            <TouchableWithoutFeedback
+              style={{flex: 1}}
+              onPress={Keyboard.dismiss}>
+              <ScrollView>
+                {renderInputs.map(i => {
+                  return (
+                    <ProfileInput
+                      title={i.title}
+                      value={i.value}
+                      set={i.set}
+                      edit={true}
+                    />
+                  );
+                })}
+              </ScrollView>
+            </TouchableWithoutFeedback>
+          </KeyboardAvoidingView>
         </View>
-        <PinkButton title="შენახვა" handler={() => {}} />
+        <PinkButton title={t('shared.save')} handler={() => {}} />
       </View>
     </AppContainer>
   );

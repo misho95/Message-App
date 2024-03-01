@@ -36,9 +36,15 @@
         "support" : "Support",
         "darkMode" : "Dark mode"
     },
+    "profile":{
+        "firstname" : "Firstname",
+        "lastname" : "Lastname",
+        "profileEdit" : "Edit profile"
+    },
     "shared": {
         "delete" : "Delete",
-        "goBack" : "Go Back"
+        "goBack" : "Go Back",
+        "save" : "Save"
     } 
 }
   

@@ -15,25 +15,28 @@ import {useTheme} from '../../../../../utils/global.store';
 import ProfileInput from '../../../../../components/profile/profile.input';
 import PinkButton from '../../../../../components/shared/pink.button';
 import DarkButton from '../../../../../components/shared/dark.button';
+import {useTranslation} from 'react-i18next';
 
 const ProfileDetaileScreen = ({navigation}) => {
   const {theme} = useTheme();
 
+  const {t} = useTranslation();
+
   const renderInputs = [
     {
-      title: 'სახელი',
+      title: t('profile.firstname'),
       value: 'მანანა',
     },
     {
-      title: 'გვარი',
+      title: t('profile.lastname'),
       value: 'რუსიტაშვილი',
     },
     {
-      title: 'მეილი',
+      title: t('forms.email'),
       value: 'rusitashvilimanana@gmail.com',
     },
     {
-      title: 'მობილურის ნომერი',
+      title: t('forms.mobile'),
       value: '598887766',
     },
   ];
@@ -44,12 +47,12 @@ const ProfileDetaileScreen = ({navigation}) => {
         style={{
           flex: 1,
           justifyContent: 'space-between',
-          gap: 10,
+          gap: 20,
           paddingBottom: 10,
         }}>
         <View style={styles.container}>
           <Text style={theme === 'light' ? styles.title : styles.titleDark}>
-            პროფილი
+            {t('profileNav.profile')}
           </Text>
           <ScrollView style={{height: '100%'}}>
             <View
@@ -64,12 +67,12 @@ const ProfileDetaileScreen = ({navigation}) => {
                   <ProfileInput title={r.title} value={r.value} edit={false} />
                 );
               })}
-              <DarkButton title={'პაროლის აღდგენა'} />
+              <DarkButton title={t('forms.passwordRecovery')} />
             </View>
           </ScrollView>
         </View>
         <PinkButton
-          title="პროფილის რედაქტირება"
+          title={t('profile.profileEdit')}
           handler={() => navigation.navigate('profile/edit')}
         />
       </View>

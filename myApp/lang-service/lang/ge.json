@@ -36,9 +36,15 @@
         "support" : "დახმარება",
         "darkMode" : "მუქი ფონი"
     },
+    "profile":{
+        "firstname" : "სახელი",
+        "lastname" : "გვარი",
+        "profileEdit" : "პროფილის რედაქტირება"
+    },
     "shared": {
         "delete" : "წაშლა",
-        "goBack" : "უკან დაბრუნება"
+        "goBack" : "უკან დაბრუნება",
+        "save" : "შენახვა"
     } 
 }
   
